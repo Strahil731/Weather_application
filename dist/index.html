@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <h1>Responsive Weather App Powered by the Open Weather API</h1>
+        <section id="searchBar" class="searchBar">
+            <form id="searchBar_form" class="searchBar_form" role="search">
+                <label for="searchBar_text">Enter a new location</label>
+                <input id="searchBar_text" class="searchBar_text" type="text" role="searchbox" size="40"
+                    autocomplete="off" placeholder="City, State, Country" />
+                <button id="searchBar_button" class="searchBar_button" title="Submit Location"
+                    aria-label="Enter Zip Code or City, State, Country to retrieve weather conditions">
+                    <i class="fas fa-search"></i>
+                    <i class="fas fa-sync fa-spin"></i>
+                </button>
+            </form>
+        </section>
+        <a href="#currentForecast" class="skip-link">Skip to Current Conditions</a>
+        <section id="currentForecast" class="currentForecast" role="region" aria-labelledby="weatherLocation">
+            <h2 id="currentForecast_location" class="currentForecast_location">Current Conditions</h2>
+            <div id="currentForecast_conditions" class="currentForecast_conditions"></div>
+        </section>
+        <nav id="navButtons" class="navButtons"></nav>
+        <section id="deilyForecast" class="deilyForecast"></section>
+    </main>
+</body>
+
+</html>

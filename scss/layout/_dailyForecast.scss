@@ -1,5 +1,5 @@
 .dailyForecast {
-    .dailyForecast_title {
+    .dailyForecast__title {
         font-size: 1.1rem;
         text-align: center;
         margin-top: 0.5rem;
@@ -9,7 +9,7 @@
         }
     }
 
-    .dailyForecast_contents {
+    .dailyForecast__contents {
         flex-grow: 1;
         @include flexCenter;
         justify-content: space-evenly;

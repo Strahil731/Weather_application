@@ -1,16 +1,16 @@
 .currentForecast {
-    .currentForecast__location {
+    .currentForecast_location {
         font-size: 1rem;
         font-weight: normal;
         text-align: center;
         margin-bottom: 1rem;
 
-        @include mq(768px) {
+        @include mq(769px) {
             font-size: 1.3rem;
         }
     }
 
-    .currentForecast__conditions {
+    .currentForecast_conditions {
         width: 100%;
         font-size: 1.1rem;
         margin: auto auto 2rem;
@@ -49,7 +49,7 @@
                 top: 55%;
                 left: 85%;
 
-                @include mq(768px) {
+                @include mq(769px) {
                     left: 75%;
                 }
             }
@@ -105,6 +105,7 @@
             grid-column: 1 / span 4;
             padding-top: 0.5rem;
             font-weight: normal;
+
         }
 
         .humidity {
@@ -112,7 +113,7 @@
             grid-row: 6 / span 1;
             grid-column: 1 / span 4;
             padding-top: 0.5rem;
-            font-weight: normal;
+            font-weight: noramal;
             color: $fadecolor;
 
             @include mqMaxWMinH(1024px, 700px) {

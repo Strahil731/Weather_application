@@ -1,13 +1,13 @@
 .searchBar {
     padding: 0.5rem 0.5rem 1.5rem;
 
-    .searchBar__form {
+    .searchBar_form {
         display: flex;
         justify-content: space-between;
         border: 2px solid $bordercolor;
         border-radius: 500px;
 
-        .searchBar__text {
+        .searchBar_text {
             flex-grow: 1;
             border: none;
             margin-right: 0.25rem;
@@ -19,11 +19,11 @@
             outline: none;
         }
 
-        .searchBar__text::placeholder {
+        .searchBar_text::placeholder {
             color: $fadecolor;
         }
 
-        .searchBar__button {
+        .searchBar_button {
             border: none;
 
             i {
@@ -31,16 +31,16 @@
             }
         }
 
-        .searchBar__button:hover,
-        .searchBar__button:focus {
+        .searchBar_button:hover,
+        .searchBar_button:focus {
             border: none;
             box-shadow: none;
             text-shadow: 4px 2px 5px $text-shadow-color;
         }
     }
 
-    .searchBar__form:focus-within,
-    .searchBar__form:hover {
+    .searchBar_form:focus-within,
+    .searchBar_form:hover {
         box-shadow: 4px 2px 5px $text-shadow-color;
     }
 }

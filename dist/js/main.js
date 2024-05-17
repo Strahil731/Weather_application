@@ -58,6 +58,18 @@ function loadWeather(event) {
     if (!savedLocation && !event) {
         return getGeoWeather();
     }
+
+    if (!savedLocation && event.type === "click") {
+        displayError("No Home Location Saved.", "Sorry. Please save your home location first!");
+    }
+    else if (savedLocation && !event) {
+        displayHomeLocationWeather(savedLocation);
+    }
+    else {
+        const homeIcon = document.querySelector("fa-home");
+        addSpinner(homeIcon);
+        displayHomeLocationWeather(savedLocation);
+    }
 }
 
 async function updateDataAndDisplay(locationObj) {

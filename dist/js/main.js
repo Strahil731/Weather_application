@@ -48,7 +48,6 @@ function geoSuccess(position) {
 
     // Set location object
     setLocationObject(currentLoc, myCoordsObj);
-    console.log(currentLoc);
     // Update data and display
     updateDataAndDisplay(currentLoc);
 }
@@ -72,7 +71,22 @@ function loadWeather(event) {
     }
 }
 
+function displayHomeLocationWeather(home) {
+    if (typeof home === "string") {
+        const locationJson = JSON.parse(home);
+        const myCoordsObj = {
+            lat: locationJson.lat,
+            lon: locationJson.lon,
+            name: locationJson.name,
+            unit: locationJson.unit
+        };
+        // setLocationObject(currentLoc, myCoordsObj);
+        // updateDataAndDisplay(currentLoc);
+    }
+}
+
 async function updateDataAndDisplay(locationObj) {
+    console.log(locationObj);
     // const weatherJson = await getWeatherFromCoords(locationObj);
     // if (weatherJson) {
     //     updateDisplay(weatherJson, locationObj);

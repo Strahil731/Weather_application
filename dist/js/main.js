@@ -10,6 +10,8 @@ function initApp() {
 
     const homeButton = document.getElementById("home");
     homeButton.addEventListener("click", loadWeather);
+    const saveButton = document.getElementById("saveLocation");
+    saveButton.addEventListener("click", saveLocation);
     // Set up
 
     // Load weather
@@ -82,6 +84,13 @@ function displayHomeLocationWeather(home) {
         };
         // setLocationObject(currentLoc, myCoordsObj);
         // updateDataAndDisplay(currentLoc);
+    }
+}
+
+function saveLocation() {
+    if (currentLoc.getLat() && currentLoc.getLon()) {
+        const saveIcon = document.querySelector(".fa-save");
+        addSpinner(saveIcon);
     }
 }
 

@@ -4,7 +4,7 @@ export function setLocationObject(locationObj, coordsObj) {
     locationObj.setLon(lon);
     locationObj.setName(name);
     if (unit) {
-        locationObj.seUnit(unit);
+        locationObj.setUnit(unit);
     }
 }
 
